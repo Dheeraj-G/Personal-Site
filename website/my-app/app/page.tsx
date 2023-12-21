@@ -6,113 +6,137 @@ import Link from "next/link"
 import  { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { CardHeader, CardContent, Card } from "@/components/ui/card"
+import ProfilePic from "@/app/Headshot.jpg"
+import OSU from "@/app/Ohio-State-Logo.png"
 
 export default function Home() {
   return (
     <>
       <header className="px-4 lg:px-6 h-16 flex items-center">
-        <Link className="flex items-center justify-center" href="#">
-          <UserIcon className="h-6 w-6" />
-          <span className="sr-only">John Doe</span>
+        <Link className="flex items-center justify-center" href="https://www.osu.edu/">
+          <img
+                  className = "mx-auto mb-4"
+                  height = "40"
+                  src = {OSU.src}
+                  style={{
+                    aspectRatio: "200/200",
+                    objectFit: "cover",
+                  }}
+                  width ="40"
+                  />
+          <span className="sr-only">Dheeraj Gosula</span>
         </Link>
         <nav className="ml-auto flex gap-4 sm:gap-6">
-          <Link className="text-sm font-medium hover:underline underline-offset-4" href="#">
-            About
-          </Link>
-          <Link className="text-sm font-medium hover:underline underline-offset-4" href="#">
+            <Link className="text-sm font-medium hover:underline underline-offset-4" href="#about">
+              About
+            </Link>
+          <Link className="text-sm font-medium hover:underline underline-offset-4" href="#skills">
             Skills
           </Link>
-          <Link className="text-sm font-medium hover:underline underline-offset-4" href="#">
+          <Link className="text-sm font-medium hover:underline underline-offset-4" href="#projects">
             Projects
           </Link>
-          <Link className="text-sm font-medium hover:underline underline-offset-4" href="#">
+          <Link className="text-sm font-medium hover:underline underline-offset-4" href="#contact">
             Contact
           </Link>
         </nav>
       </header>
       <main className="flex-1">
-        <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48" id="hero">
+        <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-gray-100 dark:bg-gray-800" id="hero">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center space-y-4 text-center">
               <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
-                Welcome to my personal website
+                <img
+                  className = "mx-auto mb-4"
+                  height = "200"
+                  src = {ProfilePic.src}
+                  style={{
+                    aspectRatio: "200/200",
+                    objectFit: "cover",
+                  }}
+                  width ="200"
+                  />
+                Dheeraj Gosula
               </h1>
               <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
-                I'm John Doe, a software developer specializing in web development. Take a look around to learn more
-                about me and my work.
+                I'm a freshman in Honors Computer Science and Engineering at the Ohio State University.
               </p>
-              <Button>Download CV</Button>
+              <Link href= "https://drive.google.com/file/d/1S_rvnHqTGHcDjn-PvH5P_DB1DcnufLtD/view?usp=drive_link" download="Dheeraj_Gosula_Resumé.pdf" target="_blank" rel="noopener noreferrer">
+                <Button>Download Resumé</Button>
+              </Link>
             </div>
           </div>
         </section>
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800" id="about">
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-[#710C04] dark:bg-gray-800" id="about">
           <div className="container px-4 md:px-6">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">About Me</h2>
-            <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-              I'm a full-stack web developer with 5 years of experience in modern web technologies including React,
-              Node.js, and TypeScript. I'm passionate about creating dynamic and interactive web applications that
-              improve user experience.
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-[#808080]">About Me</h2>
+            <p className="max-w-[600px] text-[#FFFFFF] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+              I'm currently studying my bachelor's degree in Computer Science and Engineering. I am involved in various student organizaitons including OHI/O, Software Development Club, and Artificial Intelligence Club.
             </p>
           </div>
         </section>
-        <section className="w-full py-12 md:py-24 lg:py-32" id="skills">
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800" id="skills">
           <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6 lg:gap-10">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Skills</h2>
             <div className="flex flex-wrap justify-center gap-2">
-              <Badge>React</Badge>
-              <Badge>Node.js</Badge>
-              <Badge>TypeScript</Badge>
+              <Badge>Java</Badge>
+              <Badge>Python</Badge>
+              <Badge>C++</Badge>
               <Badge>JavaScript</Badge>
               <Badge>HTML/CSS</Badge>
               <Badge>Git</Badge>
             </div>
           </div>
         </section>
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800" id="projects">
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-[#710C04] dark:bg-gray-800" id="projects">
           <div className="container px-4 md:px-6">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Projects</h2>
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl mb-4 text-[#808080]">Projects</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               <Card>
                 <CardHeader>
-                  <h3 className="text-lg font-bold">Project 1</h3>
+                  <h3 className="text-lg font-bold">Science Olympiad Website Project</h3>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-sm">A brief description of the project.</p>
+                  <p className="text-sm"> Designed and created an online web page for a school organization with the use of HTML and CSS. Demonstrated Front-end development skill sets.</p>
                 </CardContent>
               </Card>
               <Card>
                 <CardHeader>
-                  <h3 className="text-lg font-bold">Project 2</h3>
+                  <h3 className="text-lg font-bold">Iris Flowers Classification Project</h3>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-sm">A brief description of the project.</p>
+                  <p className="text-sm"> Utilized various machine learning algorithms to evaluate the Iris Flowers Dataset. 
+                  Implemented the project using Python, and utilized popular machine learning libraries such as Scikit-Learn 
+                  and Pandas for data preprocessing, model training, and evaluation.
+                  </p>
                 </CardContent>
               </Card>
               <Card>
                 <CardHeader>
-                  <h3 className="text-lg font-bold">Project 3</h3>
+                  <h3 className="text-lg font-bold">Perspective Generator Project</h3>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-sm">A brief description of the project.</p>
+                  <p className="text-sm"> Utilized the OpenAI API to output three perspectives of a
+                   user's inputted opinion. Sanitized the user input, used common prompt engineering
+                    techniques to iterate on the prompt, evaluated different models, and passed the 
+                    output to the UI. 
+                  </p>
                 </CardContent>
               </Card>
             </div>
           </div>
         </section>
-        <section className="w-full py-12 md:py-24 lg:py-32" id="contact">
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800" id="contact">
           <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">Contact Me</h2>
             <p className="mx-auto max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-              You can reach me at johndoe@example.com or follow me on social media.
+              You can reach me at gosuladheeraj@gmail.com or follow me on social media.
             </p>
             <div className="flex space-x-4">
-              <Link href="#">
-                <TwitterIcon className="w-4 h-4" />
-              </Link>
-              <Link href="#">
+              <Link href="https://www.linkedin.com/in/dheeraj-gosula-b150b1262/">
                 <LinkedinIcon className="w-4 h-4" />
               </Link>
-              <Link href="#">
+              <Link href="https://github.com/Dheeraj-G">
                 <GithubIcon className="w-4 h-4" />
               </Link>
             </div>
@@ -120,15 +144,7 @@ export default function Home() {
         </section>
       </main>
       <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
-        <p className="text-xs text-gray-500 dark:text-gray-400">© John Doe. All rights reserved.</p>
-        <nav className="sm:ml-auto flex gap-4 sm:gap-6">
-          <Link className="text-xs hover:underline underline-offset-4" href="#">
-            Terms of Service
-          </Link>
-          <Link className="text-xs hover:underline underline-offset-4" href="#">
-            Privacy
-          </Link>
-        </nav>
+        <p className="text-xs text-gray-500 dark:text-gray-400">Author- Dheeraj Gosula</p>
       </footer>
     </>
   )
