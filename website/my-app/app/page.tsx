@@ -3,6 +3,7 @@
  * @see https://v0.dev/t/tZc8WA2MCch
  */
 import Link from "next/link"
+import Image from "next/image"
 import  { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { CardHeader, CardContent, Card } from "@/components/ui/card"
@@ -14,16 +15,17 @@ export default function Home() {
     <>
       <header className="px-4 lg:px-6 h-16 flex items-center">
         <Link className="flex items-center justify-center" href="https://www.osu.edu/">
-          <img
-                  className = "mx-auto mb-4"
-                  height = "40"
-                  src = {OSU.src}
-                  style={{
-                    aspectRatio: "200/200",
-                    objectFit: "cover",
-                  }}
-                  width ="40"
-                  />
+          <Image
+              alt = "test"
+              className = "mx-auto mb-4"
+              height = "40"
+              src = {OSU.src}
+              style={{
+                aspectRatio: "200/200",
+                objectFit: "cover",
+              }}
+              width ="40"
+              />
           <span className="sr-only">Dheeraj Gosula</span>
         </Link>
         <nav className="ml-auto flex gap-4 sm:gap-6">
@@ -46,7 +48,8 @@ export default function Home() {
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center space-y-4 text-center">
               <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
-                <img
+                <Image
+                  alt = "test"
                   className = "mx-auto mb-4"
                   height = "200"
                   src = {ProfilePic.src}
@@ -59,7 +62,7 @@ export default function Home() {
                 Dheeraj Gosula
               </h1>
               <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
-                I'm a freshman in Honors Computer Science and Engineering at the Ohio State University.
+                I&apos;m a freshman in Honors Computer Science and Engineering at the Ohio State University.
               </p>
               <Link href= "https://drive.google.com/file/d/1S_rvnHqTGHcDjn-PvH5P_DB1DcnufLtD/view?usp=drive_link" download="Dheeraj_Gosula_Resumé.pdf" target="_blank" rel="noopener noreferrer">
                 <Button>Download Resumé</Button>
@@ -71,7 +74,7 @@ export default function Home() {
           <div className="container px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-[#808080]">About Me</h2>
             <p className="max-w-[600px] text-[#FFFFFF] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-              I'm currently studying my bachelor's degree in Computer Science and Engineering. I am involved in various student organizaitons including OHI/O, Software Development Club, and Artificial Intelligence Club.
+              I&apos;m currently studying my bachelor&apos;s degree in Computer Science and Engineering. I am involved in various student organizaitons including OHI/O, Software Development Club, and Artificial Intelligence Club.
             </p>
           </div>
         </section>
@@ -117,7 +120,7 @@ export default function Home() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm"> Utilized the OpenAI API to output three perspectives of a
-                   user's inputted opinion. Sanitized the user input, used common prompt engineering
+                   user&apos;s inputted opinion. Sanitized the user input, used common prompt engineering
                     techniques to iterate on the prompt, evaluated different models, and passed the 
                     output to the UI. 
                   </p>
