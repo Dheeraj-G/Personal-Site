@@ -91,6 +91,7 @@ export default function Home() {
               <Badge>Flask</Badge>
               <Badge>Node JS</Badge>
               <Badge>React JS</Badge>
+              <Badge>Docker</Badge>
             </div>
           </div>
         </section>
