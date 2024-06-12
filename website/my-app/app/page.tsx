@@ -62,10 +62,10 @@ export default function Home() {
                 Dheeraj Gosula
               </h1>
               <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
-                I&apos;m a freshman in Honors Computer Science and Engineering at the Ohio State University.
+                I&apos;m a sophomore in Honors Computer Science and Engineering at the Ohio State University.
               </p>
               <Link href= "https://drive.google.com/file/d/1S_rvnHqTGHcDjn-PvH5P_DB1DcnufLtD/view?usp=drive_link" download="Dheeraj_Gosula_Resumé.pdf" target="_blank" rel="noopener noreferrer">
-                <Button>Download Resumé</Button>
+                <Button>Download Resume</Button>
               </Link>
             </div>
           </div>
@@ -97,10 +97,13 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               <Card>
                 <CardHeader>
-                  <h3 className="text-lg font-bold">Science Olympiad Website Project</h3>
+                  <h3 className="text-lg font-bold">Buck-eye</h3>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-sm"> Designed and created an online web page for a school organization with the use of HTML and CSS. Demonstrated Front-end development skill sets.</p>
+                  <p className="text-sm"> Implementing object detection with the use of the Yolov8 pretrained model, which allows 
+                    users to view an updating web application which updates the open seats and tables at an Ohio State University 
+                    Library. Building the frontend using ReactJS and Flask to generate a 2D model of the library.
+                    </p>
                 </CardContent>
               </Card>
               <Card>
