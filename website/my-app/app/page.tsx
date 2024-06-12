@@ -88,6 +88,9 @@ export default function Home() {
               <Badge>JavaScript</Badge>
               <Badge>HTML/CSS</Badge>
               <Badge>Git</Badge>
+              <Badge>Flask</Badge>
+              <Badge>Node JS</Badge>
+              <Badge>React JS</Badge>
             </div>
           </div>
         </section>
