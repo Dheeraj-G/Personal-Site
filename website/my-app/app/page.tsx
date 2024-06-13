@@ -64,7 +64,7 @@ export default function Home() {
               <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
                 I&apos;m a sophomore in Honors Computer Science and Engineering at the Ohio State University.
               </p>
-              <Link href= "https://drive.google.com/file/d/1S_rvnHqTGHcDjn-PvH5P_DB1DcnufLtD/view?usp=drive_link" download="Dheeraj_Gosula_Resumé.pdf" target="_blank" rel="noopener noreferrer">
+              <Link href= "https://drive.google.com/file/d/1CM9nRph1JPTG-CJ4438EMJE3eoB_FOTt/view?usp=sharing" download="Dheeraj_Gosula_Resumé.pdf" target="_blank" rel="noopener noreferrer">
                 <Button>Download Resume</Button>
               </Link>
             </div>
